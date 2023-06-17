@@ -1,0 +1,158 @@
+{
+    "info": {
+        "_postman_id": "ff250e92-614b-4a71-9f25-48d558f7aa03",
+        "name": "VoloPay_testcases",
+        "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+        "description": ""
+    },
+    "item": [
+        {
+            "name": "GetAllData",
+            "request": {
+                "method": "GET",
+                "url": {
+                    "raw": "http://localhost:3000/api/cmp_data",
+                    "path": [
+                        "api",
+                        "cmp_data"
+                    ],
+                    "protocol": "http",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "3000"
+                }
+            }
+        },
+        {
+            "name": "GetCmpDataByTotalItems",
+            "request": {
+                "method": "GET",
+                "url": {
+                    "raw": "http://localhost:3000/api/total_items?department=Marketting",
+                    "query": [
+                        {
+                            "key": "department",
+                            "value": "Marketting"
+                        }
+                    ],
+                    "variable": [],
+                    "path": [
+                        "api",
+                        "total_items"
+                    ],
+                    "protocol": "http",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "3000"
+                }
+            }
+        },
+        {
+            "name": "GetMostNthItem",
+            "request": {
+                "method": "GET"
+            }
+        },
+        {
+            "name": "GetPercSalesByDept",
+            "request": {
+                "method": "GET",
+                "url": {
+                    "raw": "http://localhost:3000/api/percentage_of_department_wise_sold_items",
+                    "path": [
+                        "api",
+                        "percentage_of_department_wise_sold_items"
+                    ],
+                    "protocol": "http",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "3000"
+                }
+            }
+        },
+        {
+            "name": "GetCmpDataByMonths",
+            "request": {
+                "method": "GET",
+                "url": {
+                    "raw": "http://localhost:3000/api/monthly_sales?year=2022&product=Discord",
+                    "query": [
+                        {
+                            "key": "year",
+                            "value": "2022"
+                        },
+                        {
+                            "key": "product",
+                            "value": "Discord"
+                        }
+                    ],
+                    "variable": [],
+                    "path": [
+                        "api",
+                        "monthly_sales"
+                    ],
+                    "protocol": "http",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "3000"
+                }
+            }
+        },
+        {
+            "name": "CreateNewEntry",
+            "request": {
+                "method": "POST",
+                "url": {
+                    "raw": "http://localhost:3000/api/cmp_data",
+                    "path": [
+                        "api",
+                        "cmp_data"
+                    ],
+                    "protocol": "http",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "3000"
+                },
+                "body": {
+                    "mode": "raw",
+                    "options": {
+                        "raw": {
+                            "language": "json"
+                        }
+                    },
+                    "raw": "{\n  \"id\": 5789,\n  \"date\": \"2023-01-27 00:35:56 +0530\",\n  \"user\": \"Andre\",\n  \"department\": \"Marketting\",\n  \"software\": \"Discord\",\n  \"seats\": 4,\n  \"amount\": 54\n}"
+                }
+            }
+        },
+        {
+            "name": "GetCmpDataById",
+            "request": {
+                "method": "GET",
+                "url": {
+                    "raw": "http://localhost:3000/api/cmp_data/id:648ddbb4361ff80579c4a113",
+                    "path": [
+                        "api",
+                        "cmp_data",
+                        "id:648ddbb4361ff80579c4a113"
+                    ],
+                    "protocol": "http",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "3000"
+                }
+            }
+        },
+        {
+            "name": "UdateCmpDataByID",
+            "request": {
+                "method": "GET"
+            }
+        }
+    ]
+}
